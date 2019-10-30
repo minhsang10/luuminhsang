@@ -109,125 +109,34 @@
             </div>
         </section>
 
-        <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Requirement</button>
-            <button class="tablinks" onclick="openCity(event, 'Paris')">Design</button>
-            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Implement</button>
-        </div>
+      
+                    
 
 
-        <div id="London" class="tabcontent">
-            <p> <b>1. Yêu cầu: </b>Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ
-                như sinh viên, môn học, giảng viên,… để thiết kế trên phần
-                mềm một chức năng trên web để thêm, sửa, xóa, tìm kiếm
-                cho đối tượng đó.</p>
-            <p> <b>2. Upload tất cả lên Azure / github trong menu Lab1 theo thứ
-                tự: </b>
-                 Tab Yêu cầu: copy lại nội dung của phần 1 vào đây (trình bày
-                cho đẹp)<br>
-                 Tab Thiết kế: để link tới các file sau đây:<br>
-                o Thiết kế trên giấy (chụp lại ảnh)<br>
-                o Thiết kế trên phần mềm thiết kế <br>
-                 Tab Hiện thực: chuyển tất cả thiết kế ở trên ở trên sang html </p>
-            <p>Chú ý khi làm bài tập
-                 Sử dụng Figma để thiết kế trên toàn bộ môn học.
-                 Phải thiết kế trên giấy nháp trước rồi thực hiện thiết kế
-                trên phần mềm sau (cung cấp cả 2 file này trong Tab Thiết kế theo hướng dẫn trên lớp)
-                 Đặt tên file theo định dạng lab1.fig, lab2.fig... Nếu có
-                nhiều file thì: lab1_1.fig, lab1_2.fig.
-                 Đặt tất cả các file thiết kế vào thư mục có tên:
-                maSV_design (000111222_design)</p>
-        </div>
+            </div><!-- END COLORLIB-MAIN -->
+        </div><!-- END COLORLIB-PAGE -->
 
-        <div id="Paris" class="tabcontent">
-            <div class="header">
-                <h3 style="text-align:center;">Sketches:</h3>
-                <img src="lab1____2.jpg"  width="450" height="450"> <a class="download" href="lab1____2.jpg" download="lab1____2.jpg">Download</a>
-                <img src="lab1____3.jpg"  width="450" height="450"> <a class="download" href="lab1____3.jpg" download="lab1____3.jpg">Download</a>
-                <h3 style="text-align:center;">Figma:</h3>
-                <img src="lab1__1.png" width="450" height="450" > <a class="download" href="lab1__1.png" download="lab1__1.png">Download</a>
-                <img src="lab1__2.PNG" width="450" height="450" >   <a class="download" href="lab1__2.PNG" download="lab1__2.PNG">Download</a>
-                <img src="lab1__3.PNG" width="450" height="450" >  <a class="download" href="lab1__3.PNG" download="lab1__3.PNG">Download</a>
-                <img src="lab1__4.PNG" width="450" height="450" >  <a class="download" href="lab1__4.PNG" download="lab1__4.PNG">Download</a>
-                <br><br>
-                <center> <a class="download" href="17130189_design.zip" download="17130189_design.zip">Download All</a></center>
-            </div>
-
-            <div id="Tokyo" class="tabcontent">
-
-                <div class="cities">
-                    <center>  <h2> Student Manager System</h2> </center>
-                </div>
-                <center>
+        <!-- loader -->
+        <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-                    <a class="download" href="#" >Sign in</a><br>
-                    <td width="30%" align="right">*ID :</td>
-                    <td><input type="text" name="email" size="37"></td><br>
-                    <td width="30%" align="right">*Password:</td>
-                    <td><input type="text" name="email" size="31"></td><br>
-                    <div class="nau"> <center>
-
-                        <li><a href="#" style="button">MENU</li></a><br><br><br>
-
-                        <br>
-                    </div>
-                    <div class="nav">
-                        <center>
-                            <h3>  <ul>
-
-
-                                <li><a href="addstudent.html">Add new student</li></a><br>
-                                <li><a href="editinfotab1.html">Edit information</li></a><br>
-                                <li><a href="deletetab1.html">Delete student</li></a><br>
-                                <li><a href="search.html">Search information</li></a><br>
-                                <li><a href="elements.html">Exit</li></a><br>
-                        </center>
-            </div>
-
-            <script>
-                function openCity(evt, cityName) {
-                    var i, tabcontent, tablinks;
-                    tabcontent = document.getElementsByClassName("tabcontent");
-                    for (i = 0; i < tabcontent.length; i++) {
-                        tabcontent[i].style.display = "none";
-                    }
-                    tablinks = document.getElementsByClassName("tablinks");
-                    for (i = 0; i < tablinks.length; i++) {
-                        tablinks[i].className = tablinks[i].className.replace(" active", "");
-                    }
-                    document.getElementById(cityName).style.display = "block";
-                    evt.currentTarget.className += " active";
-                }
-                // Get the element with id="defaultOpen" and click on it
-                document.getElementById("defaultOpen").click();
-            </script>
-
-
-        </div><!-- END COLORLIB-MAIN -->
-    </div><!-- END COLORLIB-PAGE -->
-
-    <!-- loader -->
-    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/jquery.animateNumber.min.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script src="js/jquery.timepicker.min.js"></script>
+        <script src="js/scrollax.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+        <script src="js/google-map.js"></script>
+        <script src="js/main.js"></script>
 
 </body>
 </html>
