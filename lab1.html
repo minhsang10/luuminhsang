@@ -29,6 +29,9 @@
     <link rel="stylesheet" href="css/style.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+   
     <style>
         body {font-family: Arial;}
         .tab {
@@ -65,9 +68,35 @@
             border: 1px solid #ccc;
             border-top: none;
         }
+.button{
+background: #00ccff; /*màu nền của nút*/
+border: 3px #00ccff outset;
+padding: 0 2px;
+text-decoration: none;
+font: bold 10px Verdana; /*kích thước của text*/
+color:#ff0000; /*màu text*/
+}
+
+.button:hover {
+border-style: inset;
+background: #33ffff; /*màu nền của nút khi rê chuột*/
+padding: 2px 3px 0 5px;
+color:#000099; /*màu text khi rê chuột*/
+}
+
+.button:visited {
+background: #00ffff; /*màu nền của nút sau khi click chuột*/
+color:#ff6600; /*màu text khi đã click chuột*/
+}
+
+.button:active{
+color: white;
+}
+
 
 
     </style>
+    
 </head>
 <body>
 
@@ -154,35 +183,18 @@
 
 <div id="3" class="tabcontent">
   <div class="cities">
-<center>  <h2> Student Manager System</h2> </center>
+<center>  <b><h2> Student Manager System</h2></b> </center>
 </div>
-<center>
+
  
+<a class="button">Add student</a>
 
- <a class="download" href="#" >Sign in</a><br>
-<td width="30%" align="right">*ID :</td>
- <td><input type="text" name="email" size="37"></td><br>
- <td width="30%" align="right">*Password:</td>
-        <td><input type="text" name="email" size="31"></td><br>
- <div class="nau"> <center>
-
- <li><a href="#" style="button">MENU</li></a><br><br><br>
  
-  <br>
- </div>
- <div class="nav">
-   <center>
-  <h3>  <ul>
-  
+ <div class="nau">
 
-  <li><a href="addstudent.html">Add new student</li></a><br>
-  <li><a href="editinfotab1.html">Edit information</li></a><br>
-  <li><a href="deletetab1.html">Delete student</li></a><br>
-  <li><a href="search.html">Search information</li></a><br>
-  <li><a href="elements.html">Exit</li></a><br>
- </center>
 
-</ul> </h3>
+ 
+ 
 </div>
 
 <script>
