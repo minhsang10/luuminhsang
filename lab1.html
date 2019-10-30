@@ -65,6 +65,69 @@
             border: 1px solid #ccc;
             border-top: none;
         }
+        
+        /*implement*/
+        .cities {
+            background-color: rgb(97, 145, 254);
+            color: black;
+            margin: 20px;
+            padding: 20px;
+            font-size:50px;
+            background-image: url('http://ldt.vn/wp-content/uploads/2019/05/He-thong-quan-ly-thong-tin-MIS.jpg');
+
+        }
+        .nav {
+            float: none;
+            width: 100%;
+            height: 560px;
+            background-color:hsl(248, 53%, 58%);
+            padding: 40px;
+            color: black;
+            list-style-type:none;
+            background-image: url('https://img2.thuthuatphanmem.vn/uploads/2018/12/30/background-dep-ppt_110341618.jpg');
+
+        }
+        .nau {
+            float: center;
+            width: 20%;
+            height: 30px;
+            background-color: rgb(100, 149, 254);
+            padding:40px;
+            color: black;
+            list-style-type:none;
+            font-size:50px;
+
+
+        }
+        a:link {
+            color:black;
+            background-color: none;
+            text-decoration: none;
+            list-style-type:none;
+        }
+        ul a{
+            display: inline-block;
+            text-decoration:none;
+            padding:20px;
+            font-size:30px;
+            font-weight:bold
+            #color:000;
+
+        }
+        a.download{
+            background-color: rgb(97, 145, 254);
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        ul {
+            list-style: none;
+        }
+        div {
+
+        }
     </style>
 </head>
 <body>
@@ -80,7 +143,6 @@
                 <li><a href="lab2.html">Lab 2</a></li>
                 <li><a href="lab3.html">Lab 3</a></li>
                 <li><a href="lab4.html">Lab 4</a></li>
-                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
 
@@ -116,12 +178,12 @@
 
 
         <div id="London" class="tabcontent">
-            <p> <h1>1. Yêu cầu: </h1>Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ
+            <p> <b>1. Yêu cầu: </b>Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ
             như sinh viên, môn học, giảng viên,… để thiết kế trên phần
             mềm một chức năng trên web để thêm, sửa, xóa, tìm kiếm
             cho đối tượng đó.</p>
-            <p> <h1>2. Upload tất cả lên Azure / github trong menu Lab1 theo thứ
-            tự: </h1>
+            <p> <b>2. Upload tất cả lên Azure / github trong menu Lab1 theo thứ
+            tự: </b>
              Tab Yêu cầu: copy lại nội dung của phần 1 vào đây (trình bày
             cho đẹp)<br>
              Tab Thiết kế: để link tới các file sau đây:<br>
@@ -140,11 +202,10 @@
 
         <div id="Paris" class="tabcontent">
             <div class="header">
-                <h1 style="color:White;"> Design <h1> </div>
-            <h3 style="text-align:center;">This is my design on paper:</h3>
+            <h3 style="text-align:center;">Sketches:</h3>
             <img src="lab1____2.jpg"  width="450" height="450"> <a class="download" href="lab1____2.jpg" download="lab1____2.jpg">Download</a>
             <img src="lab1____3.jpg"  width="450" height="450"> <a class="download" href="lab1____3.jpg" download="lab1____3.jpg">Download</a>
-            <h3 style="text-align:center;">This is my design on Figma:</h3>
+            <h3 style="text-align:center;">Figma:</h3>
             <img src="lab1__1.png" width="450" height="450" > <a class="download" href="lab1__1.png" download="lab1__1.png">Download</a>
             <img src="lab1__2.PNG" width="450" height="450" >   <a class="download" href="lab1__2.PNG" download="lab1__2.PNG">Download</a>
             <img src="lab1__3.PNG" width="450" height="450" >  <a class="download" href="lab1__3.PNG" download="lab1__3.PNG">Download</a>
@@ -154,7 +215,37 @@
         </div>
 
         <div id="Tokyo" class="tabcontent">
-            <a class="download" href="implementtab1.html" >Click to go HTML</a>
+
+            <div class="cities">
+                <center>  <h2> Student Manager System</h2> </center>
+            </div>
+            <center>
+
+
+                <a class="download" href="#" >Sign in</a><br>
+                <td width="30%" align="right">*ID :</td>
+                <td><input type="text" name="email" size="37"></td><br>
+                <td width="30%" align="right">*Password:</td>
+                <td><input type="text" name="email" size="31"></td><br>
+                <div class="nau"> <center>
+
+                    <li><a href="#" style="button">MENU</li></a><br><br><br>
+
+                    <br>
+                </div>
+                <div class="nav">
+                    <center>
+                        <h3>  <ul>
+
+
+                            <li><a href="addstudent.html">Add new student</li></a><br>
+                            <li><a href="editinfotab1.html">Edit information</li></a><br>
+                            <li><a href="deletetab1.html">Delete student</li></a><br>
+                            <li><a href="search.html">Search information</li></a><br>
+                            <li><a href="elements.html">Exit</li></a><br>
+                    </center>
+
+                    </ul> </h3>
         </div>
 
         <script>
