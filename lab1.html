@@ -68,32 +68,40 @@
             border: 1px solid #ccc;
             border-top: none;
         }
-.button{
-background: #00ccff; /*màu nền của nút*/
-border: 3px #00ccff outset;
-padding: 0 2px;
-text-decoration: none;
-font: bold 10px Verdana; /*kích thước của text*/
-color:#ff0000; /*màu text*/
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.button:hover {
-border-style: inset;
-background: #33ffff; /*màu nền của nút khi rê chuột*/
-padding: 2px 3px 0 5px;
-color:#000099; /*màu text khi rê chuột*/
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
-.button:visited {
-background: #00ffff; /*màu nền của nút sau khi click chuột*/
-color:#ff6600; /*màu text khi đã click chuột*/
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
 }
-
-.button:active{
-color: white;
+.button {
+  color: #aaa;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-top: -4px;
 }
-
-
 
     </style>
     
@@ -186,13 +194,89 @@ color: white;
 <center>  <b><h2> Student Manager System</h2></b> </center>
 </div>
 
+<div class="container">  
+  <form id="contact" action="" method="post">
+    <h3>Add Student</h3>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your ID" type="text" tabindex="2" required>
+    </fieldset>
+       <fieldset>
+    <select name="Gender" id="time" required>
+<option value="">Gender</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+</select>
+   </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number " type="tel" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Address" type="text" tabindex="4" required>
+    </fieldset>
+    <fieldset>
+         <select name="school" id="time" required>
+<option value="">School</option>
+<option value="1">Nong lam University</option>
+<option value="2">Medical University</option>
+<option value="3">University of Social Sciences and Humanities</option>
+<option value="4">University of Science</option>
+<option value="5">Other</option>
+</select>
+    </fieldset>
+    <fieldset>
+    <center>  <button name="Add" type="submit" id="" data-submit="...Sending">Add</button> </center>
+    </fieldset>
+  </form>
+  
+</div>
+
+<table id="customers">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Gender</th>
+      <th>Phone number</th>
+        <th>Address</th>
+           <th>School</th>
+                <th>Action</th>
+  </tr>
+  <tr>
+    <td>17154845</td>
+    <td>Châu Gia Phát</td>
+    <td>Male</th>
+      <td>0902544758</td>
+        <td>Bình Định</td>
+           <td>Medical University</td>
+                <td><i class="material-icons button edit">edit</i>
+        <i class="material-icons button delete">delete</i></td>
+  </tr>
+  <tr>
+     <td>17137621</td>
+    <td>Lê Yến Nhi</td>
+    <td>Female</td>
+      <td>0232558669</td>
+        <td>Quãng Ngãi</td>
+           <td>University of Social Sciences and Humanities</td>
+                <td>
+        <i class="material-icons button edit">edit</i>
+        <i class="material-icons button delete">delete</i>
+     </td>
+  </tr>
+  <tr>
+     <td>17125027</td>
+    <td>Nguyễn Quốc Anh</td>
+    <td>Male</td>
+      <td>0932554158</td>
+        <td>Cần Thơ</td>
+           <td>Nong lam University</td>
+                <td><i class="material-icons button edit">edit</i>
+        <i class="material-icons button delete">delete</i></td>
+  </tr>
  
-<a class="button">Add student</a>
-
- 
- <div class="nau">
-
-
+</table>
  
  
 </div>
