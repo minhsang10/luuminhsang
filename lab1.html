@@ -196,7 +196,7 @@
             </div>
         </section>
           <div class="tab">
-  <button class="tablinks" onclick="openCity(event, '1')">Requirement</button>
+  <button class="tablinks" onclick="openCity(event, '1') "id="defaultOpen">Requirement</button>
   <button class="tablinks" onclick="openCity(event, '2')">Design</button>
   <button class="tablinks" onclick="openCity(event, '3')">Implement</button>
 </div>
@@ -348,6 +348,8 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+   // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
 </script>
             </div><!-- END COLORLIB-MAIN -->
         </div><!-- END COLORLIB-PAGE -->
