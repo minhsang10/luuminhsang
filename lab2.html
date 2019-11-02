@@ -79,46 +79,42 @@
             border-top: none;
         }
         img.cangiua {display: block; margin-left: auto; margin-right: auto;} 
-@import "compass/css3";
+        .container1 {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+h2 {
+  text-align: center;
+  padding: 20px 0;
+}
 
-/*
+.table-bordered {
+  border: 1px solid #ddd !important;
+}
 
-RESPONSTABLE 2.0 by jordyvanraaij
-  Designed mobile first!
+table caption {
+	padding: .5em 0;
+}
 
-If you like this solution, you might also want to check out the 1.0 version:
-  https://gist.github.com/jordyvanraaij/9069194
+@media screen and (max-width: 767px) {
+  table caption {
+    display: none;
+  }
+}
 
-*/
-
-// Default options for table style
-$table-breakpoint: 480px;
-$table-background-color: #FFF;
-$table-text-color: #024457;
-$table-outer-border: 1px solid #167F92;
-$table-cell-border: 1px solid #D9E4E6;
-
-// Extra options for table style (parse these arguments when including your mixin)
-$table-border-radius: 10px;
-$table-highlight-color: #EAF3F3;
-$table-header-background-color: #167F92;
-$table-header-text-color: #FFF;
-$table-header-border: 1px solid #FFF;
-
-// The Responstable mixin
-
-@mixin responstable(
-  $breakpoint: $table-breakpoint,
-  $background-color: $table-background-color,
-  $text-color: $table-text-color,
-  $outer-border: $table-outer-border,
-  $cell-border: $table-cell-border,
-  $border-radius: none,
-  $highlight-color: none,
-  $header-background-color: $table-background-color,
-  $header-text-color: $table-text-color,
-  $header-border: $table-cell-border) {
-  
+.p {
+  text-align: center;
+  padding-top: 140px;
+  font-size: 14px;
+}
   .responstable {
     margin: 1em 0;
     width: 100%;
@@ -158,41 +154,9 @@ $table-header-border: 1px solid #FFF;
       }
     }
   
-    td {
-      display: block; // display the table data as one block for mobile
-      word-wrap: break-word;
-      max-width: 7em;
-      &:first-child { 
-        display: table-cell; // display the first one as a table cell (radio button) for mobile
-        text-align: center;
-        border-right: $cell-border;
-      }
-      @media (min-width: $breakpoint) {
-        border: $cell-border;
-      }
-    }
-  
-    th, td {
-      text-align: left;
-      margin: .5em 1em;  
-      @media (min-width: $breakpoint) {
-        display: table-cell; // show the table as a normal table for tablet and desktop
-        padding: 1em;
-      }
-    }  
-  }    
-}
+   
+   
 
-// Include the mixin (with extra options as overrides)
-
-@include responstable(
-  $border-radius: $table-border-radius,
-  $highlight-color: $table-highlight-color,
-  $header-background-color: $table-header-background-color,
-  $header-text-color: $table-header-text-color,
-  $header-border: $table-header-border);
-
-// General styles
 
 
 
@@ -333,100 +297,89 @@ h1 {
     </div>
 
     <div id="Tokyo" class="tabcontent">
-  <div class="cities">
+        <div class="cities">
     <center>  <h2> CÁP KÈO BÓNG ĐÁ </h2> </center>
 </div>
 
 <p class="alignRight"> Chào mừng, Lưu Minh Sang <br>
     <a class="download" href="#" >Đăng xuất</a><br></p>
+    
+    <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
+        <nav id="colorlib-main-menu" role="navigation">
+       <ul>
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#">Thêm Trận</a></li>   
+                <li class="colorlib-active"><a href="#">Tìm Trận</a></li>
+                <li><a href="#">Đã Chọn</a></li>
+            </ul>
+    </nav>
+<div class="container1">  
+  <form id="contact" action="" method="post">
+      <fieldset>
+    <select name="Gender" id="time" required>
+<option value="">Giờ thi đấu</option>
+<option value="male">5h-6h30</option>
+<option value="female">6h30-8h</option>
+<option value="female">8h-9h</option>
+</select>
+   </fieldset>
+       <fieldset>
+         <select name="school" id="time" required>
+<option value="">Sân bóng</option>
+<option value="1">Sân bóng đại học Nông Lâm</option>
+<option value="2">Sân bóng đại học KHTN</option>
+<option value="3">Sân bóng đại học Ngân Hàng</option>
+<option value="4">Sân bóng đại học Bách Khoa</option>
+<option value="5">Other</option>
+</select>
+    </fieldset>
 
-<div class="tab">
-    <button class="tablinks" onclick="openCity(event, '11')">Trang chủ</button>
-    <button class="tablinks" onclick="openCity(event, '22')">Thêm trận</button>
-    <button class="tablinks" onclick="openCity(event, '33')" id="defaultOpen">Tìm trận</button>
-    <button class="tablinks" onclick="openCity(event, '44')">Đã chọn</button>
-</div>
-<div id="33" class="tabcontent">
-    <span style="color: MediumSeaGreen">   <h3>Chọn sân: </h3> </span>
-    <td><select style="background-color:#b4b4b4" size="1" name="industry">
-        <option>[Chọn sân] </option>
-        <option>Sân bóng Đại học Nông Lâm </option>
-        <option>Sân bóng Đại học Ngân Hàng</option>
-        <option>Sân bóng ký túc xá khu A</option>
-        <option>Sân bóng chợ đêm</option>
-        <option>Other...</option>
-    </select></td>
-    <span style="color: MediumSeaGreen">     <h3> Chọn giờ:  </h3> </span>
-    <td><select style="background-color:#b4b4b4" size="1" name="industry">
-        <option>[Chọn giờ] </option>
-        <option>4h đến 5h </option>
-        <option>5h đến 6h30</option>
-        <option>6h30 đến 7h30</option>
-        <option>Other...</option>    </select>
-    </td>
-    <span style="color: MediumSeaGreen">            <p> <h3> Kết quả: </h3> </p> </span>
-    <center>
-        <table style="background-color:#f0f0f0" border="1">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="table-responsive" data-pattern="priority-columns">
+        <table summary="This table shows how to create responsive tables using RWD-Table-Patterns' functionality" class="table table-bordered table-hover">
+          <caption class="text-center">An example of a responsive table based on RWD-Table-Patterns' <a href="http://gergeo.se/RWD-Table-Patterns/" target="_blank"> solution</a>:</caption>
+          <thead>
             <tr>
-                <th>Sân	</th>
-                <th>Giờ thi đấu </th>
-                <th>Địa chỉ sân</th>
-                <th>Số điện thoại</th>
-                <th>Chọn</th>
+              <th>Sân</th>
+              <th data-priority="1">Giờ Thi Đấu</th>
+              <th data-priority="2">Địa Chỉ Sân</th>
+              <th data-priority="3">Số điện thoại </th>
+              <th data-priority="4">Chọn</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3</td>
+              <td>5h-6h30</td>
+              <td>Sân bóng đại học Nông Lâm</td>
+              <td>0958447558</td>
+              <td><i class="material-icons button edit">Chọn</i></td>
             </tr>
             <tr>
-                <td>3</td>
-                <td>5h-6h30</td>
-                <td>Sân bóng Đại học Nông Lâm</td>
-                <td>0958447558</td>
-                <td><input type
-                                   ="checkbox" name
-                                   ="favorite" value
-                                   ="Sport"></td>
+              <td>1</td>
+              <td>5h-6h30</td>
+              <td>Sân bóng đại học Nông Lâm</td>
+              <td>0958774665</td>
+              <td><i class="material-icons button edit">Chọn</i></td>
             </tr>
             <tr>
-                <td>1</td>
-                <td>5h-6h30</td>
-                <td>Sân bóng Đại học Nông Lâm</td>
-                <td>0958774665</td>
-                <td><input type
-                                   ="checkbox" name
-                                   ="favorite" value
-                                   ="Sport"></td>
+              <td>6</td>
+              <td>5h-6h30</td>
+              <td>Sân bóng đại học Nông Lâm</td>
+              <td>0755448554</td>
+              <td><i class="material-icons button edit">Chọn</i></td>
             </tr>
-            <tr>
-                <td>6</td>
-                <td>5h-6h30</td>
-                <td>Sân bóng Đại học Nông Lâm</td>
-                <td>07554481122</td>
-                <td><input type
-                                   ="checkbox" name
-                                   ="favorite" value
-                                   ="Sport"></td>
-            </tr>
+           
+          </tbody>
         </table>
-
-        <p class="alignRight"> <a class="download" href="#" >Xong</a><br></p>
-    </center>
+      </div><!--end of .table-responsive-->
+    </div>
+  </div>
 </div>
-
-<script>
-    function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-</script>
 
     </div>
 
