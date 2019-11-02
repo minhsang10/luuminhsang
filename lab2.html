@@ -320,7 +320,7 @@ h1 {
     </div>
 
     <div id="L" class="tabcontent">
-       <img src="usersce.png"  width="80%" height="500" class="cangiua">
+       <img src="images/usersce_lab2.png"  width="80%" height="500" class="cangiua">
     </div>
 
     <div id="Paris" class="tabcontent">
@@ -333,59 +333,100 @@ h1 {
     </div>
 
     <div id="Tokyo" class="tabcontent">
-        <div class="cities">
+  <div class="cities">
     <center>  <h2> CÁP KÈO BÓNG ĐÁ </h2> </center>
 </div>
 
 <p class="alignRight"> Chào mừng, Lưu Minh Sang <br>
     <a class="download" href="#" >Đăng xuất</a><br></p>
- 
 
-<h1>Responstable <span>2.0</span> by <span>jordyvanraaij</span></h1>
+<div class="tab">
+    <button class="tablinks" onclick="openCity(event, '11')">Trang chủ</button>
+    <button class="tablinks" onclick="openCity(event, '22')">Thêm trận</button>
+    <button class="tablinks" onclick="openCity(event, '33')" id="defaultOpen">Tìm trận</button>
+    <button class="tablinks" onclick="openCity(event, '44')">Đã chọn</button>
+</div>
+<div id="33" class="tabcontent">
+    <span style="color: MediumSeaGreen">   <h3>Chọn sân: </h3> </span>
+    <td><select style="background-color:#b4b4b4" size="1" name="industry">
+        <option>[Chọn sân] </option>
+        <option>Sân bóng Đại học Nông Lâm </option>
+        <option>Sân bóng Đại học Ngân Hàng</option>
+        <option>Sân bóng ký túc xá khu A</option>
+        <option>Sân bóng chợ đêm</option>
+        <option>Other...</option>
+    </select></td>
+    <span style="color: MediumSeaGreen">     <h3> Chọn giờ:  </h3> </span>
+    <td><select style="background-color:#b4b4b4" size="1" name="industry">
+        <option>[Chọn giờ] </option>
+        <option>4h đến 5h </option>
+        <option>5h đến 6h30</option>
+        <option>6h30 đến 7h30</option>
+        <option>Other...</option>    </select>
+    </td>
+    <span style="color: MediumSeaGreen">            <p> <h3> Kết quả: </h3> </p> </span>
+    <center>
+        <table style="background-color:#f0f0f0" border="1">
+            <tr>
+                <th>Sân	</th>
+                <th>Giờ thi đấu </th>
+                <th>Địa chỉ sân</th>
+                <th>Số điện thoại</th>
+                <th>Chọn</th>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>5h-6h30</td>
+                <td>Sân bóng Đại học Nông Lâm</td>
+                <td>0958447558</td>
+                <td><input type
+                                   ="checkbox" name
+                                   ="favorite" value
+                                   ="Sport"></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>5h-6h30</td>
+                <td>Sân bóng Đại học Nông Lâm</td>
+                <td>0958774665</td>
+                <td><input type
+                                   ="checkbox" name
+                                   ="favorite" value
+                                   ="Sport"></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>5h-6h30</td>
+                <td>Sân bóng Đại học Nông Lâm</td>
+                <td>07554481122</td>
+                <td><input type
+                                   ="checkbox" name
+                                   ="favorite" value
+                                   ="Sport"></td>
+            </tr>
+        </table>
 
-<table class="responstable">
-  
-  <tr>
-    <th>Main driver</th>
-    <th data-th="Driver details"><span>First name</span></th>
-    <th>Surname</th>
-    <th>Date of birth</th>
-    <th>Relationship</th>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Steve</td>
-    <td>Foo</td>
-    <td>01/01/1978</td>
-    <td>Policyholder</td>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Steffie</td>
-    <td>Foo</td>
-    <td>01/01/1978</td>
-    <td>Spouse</td>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Stan</td>
-    <td>Foo</td>
-    <td>01/01/1994</td>
-    <td>Son</td>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Stella</td>
-    <td>Foo</td>
-    <td>01/01/1992</td>
-    <td>Daughter</td>
-  </tr>
-  
-</table>
+        <p class="alignRight"> <a class="download" href="#" >Xong</a><br></p>
+    </center>
+</div>
+
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
 
     </div>
 
