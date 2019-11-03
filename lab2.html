@@ -153,75 +153,33 @@ table caption {
         }
       }
     }
+  .navigation {
+background: url(images/navigation.png) top left repeat-x;
+overflow: auto;
+display: block;
+float: left;
+width: 100%;
+}
+.navigation * {
+padding:0;
+margin:0;
+font-family: Georgia, "Times New Roman", Times, serif;
+font-size: 1em;
+}
+.navigation ul {
+display: block;
+float: left;
+padding: 10px 0 0 0;
+}
+.navigation ul li {
+list-style: none;
+float: left;
+margin: 0 0 0 5px;
+}
+   
   
-   
-   
 
 
-
-
-h1 {
-  font-family: Verdana;
-  font-weight: normal;
-  color: #024457;
-  span {color: #167F92;}
-}
-
-.container {
-  max-width: 400px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}fieldset {
-  border: medium none !important;
-  margin: 0 0 10px;
-  min-width: 100%;
-  padding: 0;
-  width: 100%;
-}
-#customers {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: rgb(0, 149, 185);
-  color: white;
-}
-.button {
-  color: #aaa;
-  cursor: pointer;
-  vertical-align: middle;
-  margin-top: -4px;
-}
-
-.button {
-  color: #aaa;
-  cursor: pointer;
-  vertical-align: middle;
-  margin-top: -4px;
-}
-
-.edit:hover {
-  color: #0a79df;
-}
-
-.delete:hover {
-  color: #dc2a2a;
-}
     </style>
     
 </head>
@@ -303,6 +261,14 @@ h1 {
 
 <p class="alignRight"> Chào mừng, Lưu Minh Sang <br>
     <a class="download" href="#" >Đăng xuất</a><br></p>
+    
+    <div id="navigation">
+<ul>
+<li class="home"><a href="#"><span>Trang chủ</span></a></li>
+<li class="products"><a href="#"><span>Thêm trận</span></a></li>
+<li class="contact-active"><a href="#"><span>Tìm Trận</span></a></li>
+</ul>
+</div>
     
     </nav>
 <div class="container1">  
