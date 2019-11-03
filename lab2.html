@@ -31,8 +31,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
    
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-     <link rel="stylesheet" href="css/ionicons.min.css">
     
+    
+    <link href="/dist/css/btr-menu.css" rel="stylesheet" />
    
     <style>
         body {font-family: Arial;}
@@ -104,11 +105,7 @@ table caption {
 	padding: .5em 0;
 }
 
-@media screen and (max-width: 767px) {
-  table caption {
-    display: none;
-  }
-}
+
 
 .p {
   text-align: center;
@@ -124,101 +121,62 @@ table caption {
     border-radius: $border-radius;
     border: $outer-border;
   
-    tr {
-      border: $cell-border; 
-      &:nth-child(odd) { // highlight the odd rows with a color
-        background-color: $highlight-color;
-      }  
-    }
-  
-    th {
-      display: none; // hide all the table header for mobile
-      border: $header-border;
-      background-color: $header-background-color;
-      color: $header-text-color;
-      padding: 1em;  
-      &:first-child { // show the first table header for mobile
-        display: table-cell;
-        text-align: center;
-      }
-      &:nth-child(2) { // show the second table header but replace the content with the data-th from the markup for mobile
-        display: table-cell;
-        span {display:none;}
-        &:after {content:attr(data-th);}
-      }
-      @media (min-width: $breakpoint) {
-        &:nth-child(2) { // hide the data-th and show the normal header for tablet and desktop
-          span {display: block;}
-          &:after {display: none;}
-        }
-      }
-    }
-
-  
-
-@import url("https://fonts.googleapis.com/css?family=Varela+Round");
-html {
-  box-sizing: border-box;
+  .navbar {
+  overflow: hidden;
+  background-color: #333; 
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-  padding: 0;
-  margin: 0;
-  letter-spacing: 1.1px;
-}
-
-body,
-html {
-  width: 100%;
-  height: 100%;
-  background: #1c1d22;
-  font-family: "Varela Round", sans-serif;
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 720px;
-  margin: 0 auto;
-  height: 100vh;
-  list-style: none;
-}
-
-.menu li {
-  width: 125px;
-  height: 50px;
-  transition: background-position-x 0.9s linear;
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
   text-align: center;
-
-  a {
-    font-size: 22px;
-    color: #777;
-    text-decoration: none;
-    transition: all 0.45s;
-  }
-
-  .hover {
-    background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEi%0D%0AIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhs%0D%0AaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0%0D%0AaD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tn%0D%0Acm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0i%0D%0Abm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
-    animation: line 1s;
-  }
-
- .hover a {
-    color: #d94f5c;
-  }
-
- .not(:last-child) {
-    margin-right: 30px;
-  }
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-@keyframes line {
-  0% {
-    background-position-x: 390px;
-  }
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
 }
 
     </style>
@@ -303,15 +261,19 @@ html {
 <p class="alignRight"> Chào mừng, Lưu Minh Sang <br>
     <a class="download" href="#" >Đăng xuất</a><br></p>
     
-  <nav class="menu">
+<div class="navbar">
+  <a href="#home">Trang chủ</a>  </div> 
+  <div class="navbar">
+  <a href="#home">Thêm trận</a>
+  </div> 
+<div class="navbar">
+  <a href="#home">Tìm trận</a>
+  </div> 
+<div class="navbar">
+  <a href="#home">Đã chọn</a>
+  </div>
+ 
 
-    <li class="menu-item"><a href="#0">Trang chủ</a></li>
-    <li class="menu-item"><a href="#0">Thêm trận</a></li>
-    <li class="menu-item"><a href="#0">Tìm trận</a></li>
-   <li class="menu-item"><a href="#0">Đã chọn</a></li>
-    
-  
-</nav>
     
     </nav>
 <div class="container1">  
@@ -426,6 +388,8 @@ html {
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
         <script src="js/google-map.js"></script>
         <script src="js/main.js"></script>
+        
+
 
 </body>
 </html>
