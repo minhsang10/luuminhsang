@@ -123,7 +123,35 @@ table caption {
     border: $outer-border;
   
  
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: rgb(0, 149, 185);
+}
 
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #4CAF50;
+}
 
     </style>
     
@@ -178,10 +206,10 @@ table caption {
 
 
     <div id="London" class="tabcontent">
-        <p> <b>Yêu cầu: </b>(1) Tạo ra một user scenario</p><br>
+        <p> <b>Yêu cầu: </b>(1) Tạo ra một user scenario</p>
         <p> (2) Chọn 1 bước trong user scenario để thiết kế 1 form giao diện
             Web trên công cụ thiết kế đã chọn. Sau đó tạo ra file html tương
-            ứng cho thiết kế này  </p> <br>
+            ứng cho thiết kế này  </p> 
         <p>(3) Upload lên Azure / github: trong file html có chèn hình ảnh của
             user scenario ở (1) và đường dẫn của file thiết kế ở (2) </p>
     </div>
@@ -209,14 +237,12 @@ table caption {
     
 
 
-    <div class="tab">
-        
-        <button class="tablinks" onclick="openCity(event, '2')">Trang chủ</button>
-        <button class="tablinks" onclick="openCity(event, '3')">Thêm trận</button>
-        <button class="tablinks" onclick="openCity(event, '1')" id="defaultOpen">Tìm trận</button>
-        <button class="tablinks" onclick="openCity(event, '4')">Đã chọn</button>
-
-    </div>
+ <ul>
+<li><a href="#news">Trang chủ</a></li>
+  <li><a href="#contact">Thêm trận</a></li>
+   <li><a class="active" href="#home">Tìm trận</a></li>
+  <li><a href="#about">Đã chọn</a></li>
+</ul>
 
  
 
@@ -264,21 +290,21 @@ table caption {
               <td>5h-6h30</td>
               <td>Sân bóng đại học Nông Lâm</td>
               <td>0958447558</td>
-              <td><i class="material-icons button edit">Chọn</i></td>
+              <td> <input type="radio" > </td>
             </tr>
             <tr>
               <td>1</td>
               <td>5h-6h30</td>
               <td>Sân bóng đại học Nông Lâm</td>
               <td>0958774665</td>
-              <td><i class="material-icons button edit">Chọn</i></td>
+              <td> <input type="radio" > </td>
             </tr>
             <tr>
               <td>6</td>
               <td>5h-6h30</td>
               <td>Sân bóng đại học Nông Lâm</td>
               <td>0755448554</td>
-              <td><i class="material-icons button edit">Chọn</i></td>
+              <td> <input type="radio" > </td>
             </tr>
            
           </tbody>
