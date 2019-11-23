@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Lab2_LưuMinhSang</title>
+    <title>Lab1_LưuMinhSang</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -31,34 +31,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
    
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-    
-    
-    <link href="/dist/css/btr-menu.css" rel="stylesheet" />
    
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+    </script>
+   
     <style>
-    #menu ul {
-  background: #1F568B;
-  list-style-type: none;
-  text-align: center;
-}
-#menu li {
-  color: #f1f1f1;
-  display: inline-block;
-  width: 120px;
-  height: 40px;
-  line-height: 40px;
-  margin-left: -5px;
-}
-#menu a {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-}
-#menu a:hover {
-  background: #F1F1F1;
-  color: #333;
-}
         body {font-family: Arial;}
         .tab {
             overflow: hidden;
@@ -84,7 +63,28 @@
             display: inline-block;
         }
 
-
+   #menu ul {
+  background: #1F568B;
+  list-style-type: none;
+  text-align: center;
+}
+#menu li {
+  color: #f1f1f1;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+#menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+#menu a:hover {
+  background: #F1F1F1;
+  color: #333;
+}
         /* Change background color of buttons on hover */
         .tab button:hover {
             background-color: #ddd;
@@ -103,7 +103,8 @@
             border-top: none;
         }
         img.cangiua {display: block; margin-left: auto; margin-right: auto;} 
-        .container1 {
+
+.container {
   max-width: 400px;
   width: 100%;
   margin: 0 auto;
@@ -115,66 +116,49 @@
   padding: 0;
   width: 100%;
 }
-h2 {
-  text-align: center;
-  padding: 20px 0;
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.table-bordered {
-  border: 1px solid #ddd !important;
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
-table caption {
-	padding: .5em 0;
-}
+#customers tr:nth-child(even){background-color: #f2f2f2;}
 
+#customers tr:hover {background-color: #ddd;}
 
-
-.p {
-  text-align: center;
-  padding-top: 140px;
-  font-size: 14px;
-}
-  .responstable {
-    margin: 1em 0;
-    width: 100%;
-    overflow: hidden;  
-    background: $background-color;
-    color: $text-color;
-    border-radius: $border-radius;
-    border: $outer-border;
-  
- 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid #e7e7e7;
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
   background-color: rgb(0, 149, 185);
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: #666;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #ddd;
-}
-
-li a.active {
   color: white;
-  background-color: #4CAF50;
+}
+.button {
+  color: #aaa;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-top: -4px;
 }
 
+.button {
+  color: #aaa;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-top: -4px;
+}
+
+.edit:hover {
+  color: #0a79df;
+}
+
+.delete:hover {
+  color: #dc2a2a;
+}
     </style>
     
 </head>
@@ -188,7 +172,7 @@ li a.active {
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="lab1.html">Lab 1</a></li>
-                <li class="colorlib-active"><a href="lab2.html">Lab 2</a></li>
+                <li   class="colorlib-active"><a href="lab2.html">Lab 2</a></li>
                 <li><a href="lab3.html">Lab 3</a></li>
                 <li><a href="lab4.html">Lab 4</a></li>
             </ul>
@@ -217,40 +201,46 @@ li a.active {
                 </div>
             </div>
         </section>
-     
-    <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Requirement</button>
-        <button class="tablinks" onclick="openCity(event, 'L')">User Scenario</button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">Design</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Implementation</button>
+        <!--================ Start Banner Area =================-->
 
+<section>
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#Rq">Requirements</a></li>
+    <li><a data-toggle="tab" href="#Ex0">User Scenario</a></li>
+    <li><a data-toggle="tab" href="#Ex1">Design</a></li>
+    <li><a data-toggle="tab" href="#Ex2">Implement</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="Ex1" class="tab-pane fade">
+ <h3 style="text-align:center;">Sketches:</h3>
+        <img src="images/lab2_sketches.jpg"  width="700" height="450" class="cangiua"> <center><a class="download" href="images/lab2_sketches.jpg" download="images/lab2_sketches.jpg">Download</a></center>
+        <h3 style="text-align:center;">Figma:</h3>
+        <img src="images/lab2_figma.png" width="700" height="450" class="cangiua" ><center> <a class="download" href="images/lab2_figma.fig" download="images/lab2_figma.fig">Download</a></center>
+        <br><br>
+        <center> <a class="download" href="lab2.zip" download="lab2.zip">Download All</a></center>
+</div>
+    
+    <div id="s3" class="tab-pane fade">
+      <iframe src ="cuuho.html" width="1100" height="700">Không hỗ trợ</iframe> 
     </div>
-
-
-    <div id="London" class="tabcontent">
-        <p> <b>Yêu cầu: </b>(1) Tạo ra một user scenario</p>
+    
+    
+   <div id="Rq" class="tab-pane fade in active">
+	        <p> <b>Yêu cầu: </b>(1) Tạo ra một user scenario</p>
         <p> (2) Chọn 1 bước trong user scenario để thiết kế 1 form giao diện
             Web trên công cụ thiết kế đã chọn. Sau đó tạo ra file html tương
             ứng cho thiết kế này  </p> 
         <p>(3) Upload lên Azure / github: trong file html có chèn hình ảnh của
             user scenario ở (1) và đường dẫn của file thiết kế ở (2) </p>
     </div>
-
-    <div id="L" class="tabcontent">
+    <div id="Ex0" class="tab-pane fade">
        <img src="images/usersce_lab2.png"  width="80%" height="500" class="cangiua">
     </div>
-
-    <div id="Paris" class="tabcontent">
-        <h3 style="text-align:center;">Sketches:</h3>
-        <img src="images/lab2_sketches.jpg"  width="700" height="450" class="cangiua"> <center><a class="download" href="images/lab2_sketches.jpg" download="images/lab2_sketches.jpg">Download</a></center>
-        <h3 style="text-align:center;">Figma:</h3>
-        <img src="images/lab2_figma.png" width="700" height="450" class="cangiua" ><center> <a class="download" href="images/lab2_figma.fig" download="images/lab2_figma.fig">Download</a></center>
-        <br><br>
-        <center> <a class="download" href="lab2.zip" download="lab2.zip">Download All</a></center>
-    </div>
-
-    <div id="Tokyo" class="tabcontent">
-        <div class="cities">
+    <div id="Ex2" class="tab-pane fade">
+    <div class="cities">
+  <div class="cities">
     <center>  <h2> CÁP KÈO BÓNG ĐÁ </h2> </center>
 </div>
 
@@ -334,30 +324,10 @@ li a.active {
           </tbody>
         </table>
       </div><!--end of .table-responsive-->
-    </div>
-  </div>
 </div>
-
-    </div>
-
-    <script>
-        function openCity(evt, cityName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-    </script>
-            </div><!-- END COLORLIB-MAIN -->
+    
+    <!--================ End Banner Area =================-->
+</section>
         </div><!-- END COLORLIB-PAGE -->
         
       
@@ -384,8 +354,6 @@ li a.active {
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
         <script src="js/google-map.js"></script>
         <script src="js/main.js"></script>
-        
-
 
 </body>
 </html>
