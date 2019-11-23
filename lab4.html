@@ -31,8 +31,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
    
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-    
-    
+   
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+    </script>
    
     <style>
         body {font-family: Arial;}
@@ -241,54 +244,60 @@
                 </div>
             </div>
         </section>
-          <div class="tab">
-  <button class="tablinks" onclick="openCity(event, '1') "id="defaultOpen">Requirement</button>
-  <button class="tablinks" onclick="openCity(event, '2')">Design</button>
-  <button class="tablinks" onclick="openCity(event, '3')">Implement</button>
-</div>
+        <!--================ Start Banner Area =================-->
 
-<div id="1" class="tabcontent">
-  <p>- Tạo một trang Web có nội dung bất kỳ, sử dụng linh hoạt tất cả
-những phần sau: Input Controls, Navigation, Animations, Default 
-Settings, Guided Actions </br>
- - Có biểu mẫu liên hệ</p>
-</div>
+<section>
 
-<div id="2" class="tabcontent">
-   <div class="header">
-            <h1 style="color:White;"> Design <h1> </div>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#Rq">Requirements</a></li>
+    <li><a data-toggle="tab" href="#Ex1">Design</a></li>
+    <li><a data-toggle="tab" href="#Ex2">Implement</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="Ex1" class="tab-pane fade">
+      	     
         <h3 style="text-align:center;">Sketches:</h3>
-        <img src="images/lab1_sketches.jpg"  width="700" height="450" class="cangiua"> <center><a class="download" href="images/lab1_sketches.jpg" download="images/lab1_sketches.jpg">Download</a></center>
+        <img src="images/lab3_sketches_f.jpg"  width="700" height="450" class="cangiua"> <center><a class="download" href="images/lab3_sketches_f.jpg" download="images/lab3_sketches_f.jpg">Download</a></center>
         <h3 style="text-align:center;">Figma:</h3>
-        <img src="images/lab1_figma.PNG" width="700" height="450" class="cangiua" ><center> <a class="download" href="images/lab1_figma.fig" download="images/lab1_figma.fig">Download</a></center>
+        <img src="images/lab3_figma.PNG" width="700" height="450" class="cangiua" ><center> <a class="download" href="images/lab3_figma_f.fig" download="images/lab3_figma_f.fig">Download</a></center>
 
         <br><br>
-        <center> <a class="download" href="lab1.zip" download="lab1.zip">Download All</a></center>
-</div>
-
-<div id="3" class="tabcontent">
-      <iframe src ="cuuho.html" width="1100" height="700">Không hỗ trợ</iframe>  
+        <center> <a class="download" href="lab3.zip" download="lab3.zip">Download All</a></center>  
+    </div>
+    
+    <div id="s3" class="tab-pane fade">
+      <iframe src ="fpattern.html" width="1100" height="700">Không hỗ trợ</iframe> 
+    </div>
+    
+    
+   <div id="Rq" class="tab-pane fade in active">
+	   <br/>
+	1. Trong menu Exercises (hoặc Labs), tạo 1 menu Lab3 (file lab3.html) sau đó tạo 2 tab Bài 1, Bài 2
+	   <br/>
+      Ex1: Thiết kế một trang Web đơn giản sử dụng mẫu F-pattern ==> chuyển sang html (ex1.html)
+	   <br/>
+      Ex2: Thiết kế một trang Web sử dụng mẫu Z-pattern ==> chuyển sang html (ex2.html)
+	   <br/>
+	2. Với cả Ex1, Ex2: Tạo 2 tab Design và Implementation:
+	   <br/>
+     Design: Chụp lại hình ảnh để có cái nhìn tổng quan về file thiết kế, có nút Download để download
+file thiết kế về nếu muốn
+	   <br/>
+     Implementation: Nội dung phần hiện thực trên html.
+    </div>
  
+    <div id="Ex2" class="tab-pane fade">
+      <iframe src ="zpattern.html" width="1100" height="700">Không hỗ trợ</iframe>  
+       
+    </div>
+    </div>
+    
+  </div>
 </div>
-
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-   // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-</script>
-            </div><!-- END COLORLIB-MAIN -->
+    
+    <!--================ End Banner Area =================-->
+</section>
         </div><!-- END COLORLIB-PAGE -->
         
       
