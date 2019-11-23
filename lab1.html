@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Lab1_LưuMinhSang</title>
@@ -31,8 +31,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
    
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-    
-    
+   
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+    </script>
    
     <style>
         body {font-family: Arial;}
@@ -211,10 +214,10 @@
         <nav id="colorlib-main-menu" role="navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li  class="colorlib-active"><a href="lab1.html">Lab 1</a></li>
+                <li><a href="lab1.html">Lab 1</a></li>
                 <li><a href="lab2.html">Lab 2</a></li>
                 <li><a href="lab3.html">Lab 3</a></li>
-                <li><a href="lab4.html">Lab 4</a></li>
+                <li   class="colorlib-active"><a href="lab4.html">Lab 4</a></li>
             </ul>
         </nav>
 
@@ -235,20 +238,42 @@
             <div class="container">
                 <div class="row no-gutters slider-text justify-content-center align-items-center">
                     <div class="col-md-8 ftco-animate">
-                        <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Lab 1</span></p>
-                        <h1 class="bread">Lab 1</h1>
+                        <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Lab 4</span></p>
+                        <h1 class="bread">Lab 4</h1>
                     </div>
                 </div>
             </div>
         </section>
-          <div class="tab">
-  <button class="tablinks" onclick="openCity(event, '1') "id="defaultOpen">Requirement</button>
-  <button class="tablinks" onclick="openCity(event, '2')">Design</button>
-  <button class="tablinks" onclick="openCity(event, '3')">Implement</button>
-</div>
+        <!--================ Start Banner Area =================-->
 
-<div id="1" class="tabcontent">
-  <p> <b>1. Yêu cầu: </b>Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ
+<section>
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#Rq">Requirements</a></li>
+    <li><a data-toggle="tab" href="#Ex1">Design</a></li>
+    <li><a data-toggle="tab" href="#Ex2">Implement</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="Ex1" class="tab-pane fade">
+   <div class="header">
+            <h1 style="color:White;"> Design <h1> </div>
+        <h3 style="text-align:center;">Sketches:</h3>
+        <img src="images/lab1_sketches.jpg"  width="700" height="450" class="cangiua"> <center><a class="download" href="images/lab1_sketches.jpg" download="images/lab1_sketches.jpg">Download</a></center>
+        <h3 style="text-align:center;">Figma:</h3>
+        <img src="images/lab1_figma.PNG" width="700" height="450" class="cangiua" ><center> <a class="download" href="images/lab1_figma.fig" download="images/lab1_figma.fig">Download</a></center>
+
+        <br><br>
+        <center> <a class="download" href="lab1.zip" download="lab1.zip">Download All</a></center>
+</div>
+    
+    <div id="s3" class="tab-pane fade">
+      <iframe src ="cuuho.html" width="1100" height="700">Không hỗ trợ</iframe> 
+    </div>
+    
+    
+   <div id="Rq" class="tab-pane fade in active">
+	<p> <b>1. Yêu cầu: </b>Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ
         như sinh viên, môn học, giảng viên,… để thiết kế trên phần
         mềm một chức năng trên web để thêm, sửa, xóa, tìm kiếm
         cho đối tượng đó.</p>
@@ -268,22 +293,10 @@
             nhiều file thì: lab1_1.fig, lab1_2.fig.
              Đặt tất cả các file thiết kế vào thư mục có tên:
             maSV_design (000111222_design)</p>
-</div>
-
-<div id="2" class="tabcontent">
-   <div class="header">
-            <h1 style="color:White;"> Design <h1> </div>
-        <h3 style="text-align:center;">Sketches:</h3>
-        <img src="images/lab1_sketches.jpg"  width="700" height="450" class="cangiua"> <center><a class="download" href="images/lab1_sketches.jpg" download="images/lab1_sketches.jpg">Download</a></center>
-        <h3 style="text-align:center;">Figma:</h3>
-        <img src="images/lab1_figma.PNG" width="700" height="450" class="cangiua" ><center> <a class="download" href="images/lab1_figma.fig" download="images/lab1_figma.fig">Download</a></center>
-
-        <br><br>
-        <center> <a class="download" href="lab1.zip" download="lab1.zip">Download All</a></center>
-</div>
-
-<div id="3" class="tabcontent">
-  <div class="cities">
+    </div>
+ 
+    <div id="Ex2" class="tab-pane fade">
+    <div class="cities">
 <center>  <b><h2> Student Manager System</h2></b> </center>
 </div>
 
@@ -385,28 +398,10 @@
   </tr>
 
 </table>
- 
- 
 </div>
-
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-   // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-</script>
-            </div><!-- END COLORLIB-MAIN -->
+    
+    <!--================ End Banner Area =================-->
+</section>
         </div><!-- END COLORLIB-PAGE -->
         
       
