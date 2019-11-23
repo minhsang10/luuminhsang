@@ -37,6 +37,28 @@
    
 
     <style>
+    #menu ul {
+  background: #1F568B;
+  list-style-type: none;
+  text-align: center;
+}
+#menu li {
+  color: #f1f1f1;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+#menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+#menu a:hover {
+  background: #F1F1F1;
+  color: #333;
+}
         body {font-family: Arial;}
         .tab {
             overflow: hidden;
@@ -237,14 +259,16 @@ li a.active {
     
 
 
- <ul>
-<li><a href="#news">Trang chủ</a></li>
-  <li><a href="#contact">Thêm trận</a></li>
-   <li><a class="active" href="#home">Tìm trận</a></li>
-  <li><a href="#about">Đã chọn</a></li>
-</ul>
+<div id="menu">
+  <ul>
+    <li><a href="#">Trang chủ</a></li>
 
- 
+    <li><a href="#">Thêm trận</a>
+    
+    <li class="active"><a href="#">Tìm trận </a></li>
+    <li><a href="#">Đã chọn</a></li>
+  </ul>
+</div>
 
     
     </nav>
