@@ -38,6 +38,22 @@
     </script>
    
     <style>
+    	    table {
+  border-collapse: collapse;
+  width: 100%;
+  color: black;
+    padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  
+  
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+tr:hover {background-color:#f5f5f5;}
         body {font-family: Arial;}
         .tab {
             overflow: hidden;
@@ -64,17 +80,17 @@
         }
 
    #menu ul {
-  background: #1F568B;
+  background: rgb(0, 149, 185);
   list-style-type: none;
   text-align: center;
 }
 #menu li {
-  color: #f1f1f1;
+
   display: inline-block;
   width: 120px;
   height: 40px;
   line-height: 40px;
-  margin-left: -5px;
+
 }
 #menu a {
   text-decoration: none;
@@ -82,7 +98,7 @@
   display: block;
 }
 #menu a:hover {
-  background: #F1F1F1;
+  background: rgb(0, 149, 185);
   color: #333;
 }
         /* Change background color of buttons on hover */
@@ -103,7 +119,8 @@
             border-top: none;
         }
         img.cangiua {display: block; margin-left: auto; margin-right: auto;} 
-
+.cities {
+background-image: url(https://www.wikihow.com/images_en/thumb/e/e8/Play-Soccer-Step-7-Version-8.jpg/v4-728px-Play-Soccer-Step-7-Version-8.jpg);}
 .container {
   max-width: 400px;
   width: 100%;
@@ -229,12 +246,26 @@
     
     
    <div id="Rq" class="tab-pane fade in active">
-	        <p> <b>Yêu cầu: </b>(1) Tạo ra một user scenario</p>
-        <p> (2) Chọn 1 bước trong user scenario để thiết kế 1 form giao diện
+                    	<table>
+  <tr>
+    <th>Yêu cầu</th>
+ 
+   
+  </tr>
+  
+  <tr>
+    <td>(1) Tạo ra một user scenario </td>
+
+   
+  </tr>
+  <tr>  <td> (2) Chọn 1 bước trong user scenario để thiết kế 1 form giao diện
             Web trên công cụ thiết kế đã chọn. Sau đó tạo ra file html tương
-            ứng cho thiết kế này  </p> 
-        <p>(3) Upload lên Azure / github: trong file html có chèn hình ảnh của
-            user scenario ở (1) và đường dẫn của file thiết kế ở (2) </p>
+            ứng cho thiết kế này </td> </tr>
+   <tr>     <td> (3) Upload lên Azure / github: trong file html có chèn hình ảnh của
+            user scenario ở (1) và đường dẫn của file thiết kế ở (2)</td>
+   
+  </tr>
+	</table>
     </div>
     <div id="Ex0" class="tab-pane fade">
        <img src="images/usersce_lab2.png"  width="80%" height="500" class="cangiua">
@@ -243,6 +274,7 @@
     <div class="cities">
   <div class="cities">
     <center>  <h2> CÁP KÈO BÓNG ĐÁ </h2> </center>
+ 
 </div>
 
 <p class="alignRight"> Chào mừng, Lưu Minh Sang <br>
@@ -256,7 +288,7 @@
 
     <li><a href="#">Thêm trận</a>
     
-    <li class="active"><a href="#">Tìm trận </a></li>
+    <li class="active"><a href="#"><b>Tìm trận</b> </a></li>
     <li><a href="#">Đã chọn</a></li>
   </ul>
 </div>
