@@ -38,7 +38,7 @@
     </script>
    
     <style>
-	    table {
+    	    table {
   border-collapse: collapse;
   width: 100%;
   color: black;
@@ -79,7 +79,28 @@ tr:hover {background-color:#f5f5f5;}
             display: inline-block;
         }
 
-
+   #menu ul {
+  background: #1F568B;
+  list-style-type: none;
+  text-align: center;
+}
+#menu li {
+  color: #f1f1f1;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+#menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+#menu a:hover {
+  background: #F1F1F1;
+  color: #333;
+}
         /* Change background color of buttons on hover */
         .tab button:hover {
             background-color: #ddd;
@@ -98,7 +119,8 @@ tr:hover {background-color:#f5f5f5;}
             border-top: none;
         }
         img.cangiua {display: block; margin-left: auto; margin-right: auto;} 
-
+.cities {
+background-image: url(https://www.wikihow.com/images_en/thumb/e/e8/Play-Soccer-Step-7-Version-8.jpg/v4-728px-Play-Soccer-Step-7-Version-8.jpg);}
 .container {
   max-width: 400px;
   width: 100%;
@@ -166,11 +188,11 @@ tr:hover {background-color:#f5f5f5;}
         <nav id="colorlib-main-menu" role="navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li   class="colorlib-active"><a href="lab1.html">Lab 1</a></li>
-                <li><a href="lab2.html">Lab 2</a></li>
+                <li><a href="lab1.html">Lab 1</a></li>
+                <li   class="colorlib-active"><a href="lab2.html">Lab 2</a></li>
                 <li><a href="lab3.html">Lab 3</a></li>
                 <li><a href="lab4.html">Lab 4</a></li>
-		          <li><a href="result.html">Result</a></li>
+		    <li><a href="result.html">Result</a></li>
             </ul>
         </nav>
 
@@ -191,8 +213,8 @@ tr:hover {background-color:#f5f5f5;}
             <div class="container">
                 <div class="row no-gutters slider-text justify-content-center align-items-center">
                     <div class="col-md-8 ftco-animate">
-                        <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Lab 1</span></p>
-                        <h1 class="bread">Lab 1</h1>
+                        <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Lab 2</span></p>
+                        <h1 class="bread">Lab 2</h1>
                     </div>
                 </div>
             </div>
@@ -203,21 +225,19 @@ tr:hover {background-color:#f5f5f5;}
 
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#Rq">Requirements</a></li>
+    <li><a data-toggle="tab" href="#Ex0">User Scenario</a></li>
     <li><a data-toggle="tab" href="#Ex1">Design</a></li>
     <li><a data-toggle="tab" href="#Ex2">Implement</a></li>
   </ul>
 
   <div class="tab-content">
     <div id="Ex1" class="tab-pane fade">
-   <div class="header">
-            <h1 style="color:White;"> Design <h1> </div>
-        <h3 style="text-align:center;">Sketches:</h3>
-        <img src="images/lab1_sketches.jpg"  width="700" height="450" class="cangiua"> <center><a class="download" href="images/lab1_sketches.jpg" download="images/lab1_sketches.jpg">Download</a></center>
+ <h3 style="text-align:center;">Sketches:</h3>
+        <img src="images/lab2_sketches.jpg"  width="700" height="450" class="cangiua"> <center><a class="download" href="images/lab2_sketches.jpg" download="images/lab2_sketches.jpg">Download</a></center>
         <h3 style="text-align:center;">Figma:</h3>
-        <img src="images/lab1_figma.PNG" width="700" height="450" class="cangiua" ><center> <a class="download" href="images/lab1_figma.fig" download="images/lab1_figma.fig">Download</a></center>
-
+        <img src="images/lab2_figma.png" width="700" height="450" class="cangiua" ><center> <a class="download" href="images/lab2_figma.fig" download="images/lab2_figma.fig">Download</a></center>
         <br><br>
-        <center> <a class="download" href="lab1.zip" download="lab1.zip">Download All</a></center>
+        <center> <a class="download" href="lab2.zip" download="lab2.zip">Download All</a></center>
 </div>
     
     <div id="s3" class="tab-pane fade">
@@ -226,138 +246,117 @@ tr:hover {background-color:#f5f5f5;}
     
     
    <div id="Rq" class="tab-pane fade in active">
-
-            	<table>
+                    	<table>
   <tr>
-    <th>1. Yêu cầu</th>
+    <th>Yêu cầu</th>
  
    
   </tr>
   
   <tr>
-    <td>Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ
-        như sinh viên, môn học, giảng viên,… để thiết kế trên phần
-        mềm một chức năng trên web để thêm, sửa, xóa, tìm kiếm
-        cho đối tượng đó. </td>
+    <td>(1) Tạo ra một user scenario </td>
 
    
   </tr>
-  <tr>  <th>2. Upload tất cả lên Azure / github trong menu Lab1 theo thứ
-        tự </th> </tr>
-   <tr>     <td>   Tab Yêu cầu: copy lại nội dung của phần 1 vào đây (trình bày
-        cho đẹp)<br>
-         Tab Thiết kế: để link tới các file sau đây:<br>
-        o Thiết kế trên giấy (chụp lại ảnh)<br>
-        o Thiết kế trên phần mềm thiết kế <br>
-         Tab Hiện thực: chuyển tất cả thiết kế ở trên ở trên sang html </td>
+  <tr>  <td> (2) Chọn 1 bước trong user scenario để thiết kế 1 form giao diện
+            Web trên công cụ thiết kế đã chọn. Sau đó tạo ra file html tương
+            ứng cho thiết kế này </td> </tr>
+   <tr>     <td> (3) Upload lên Azure / github: trong file html có chèn hình ảnh của
+            user scenario ở (1) và đường dẫn của file thiết kế ở (2)</td>
    
   </tr>
 	</table>
     </div>
- 
+    <div id="Ex0" class="tab-pane fade">
+       <img src="images/usersce_lab2.png"  width="80%" height="500" class="cangiua">
+    </div>
     <div id="Ex2" class="tab-pane fade">
     <div class="cities">
-<center>  <b><h2> Student Manager System</h2></b> </center>
+  <div class="cities">
+    <center>  <h2> CÁP KÈO BÓNG ĐÁ </h2> </center>
+ 
 </div>
 
-<div class="container">  
+<p class="alignRight"> Chào mừng, Lưu Minh Sang <br>
+    <a class="download" href="#" >Đăng xuất</a><br></p>
+    
+
+
+<div id="menu">
+  <ul>
+    <li><a href="#">Trang chủ</a></li>
+
+    <li><a href="#">Thêm trận</a>
+    
+    <li class="active"><a href="#">Tìm trận </a></li>
+    <li><a href="#">Đã chọn</a></li>
+  </ul>
+</div>
+
+    
+    </nav>
+<div class="container1">  
   <form id="contact" action="" method="post">
-    <h3>Add Student</h3>
-    <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" required>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your ID" type="text" tabindex="2" required>
-    </fieldset>
-       <fieldset>
+      <fieldset>
     <select name="Gender" id="time" required>
-<option value="">Gender</option>
-<option value="male">Male</option>
-<option value="female">Female</option>
+<option value="">Giờ thi đấu</option>
+<option value="male">5h-6h30</option>
+<option value="female">6h30-8h</option>
+<option value="female">8h-9h</option>
 </select>
    </fieldset>
-    <fieldset>
-      <input placeholder="Your Phone Number " type="tel" tabindex="3" required>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Address" type="text" tabindex="4" required>
-    </fieldset>
-    <fieldset>
+       <fieldset>
          <select name="school" id="time" required>
-<option value="">School</option>
-<option value="1">Nong lam University</option>
-<option value="2">Medical University</option>
-<option value="3">University of Social Sciences and Humanities</option>
-<option value="4">University of Science</option>
+<option value="">Sân bóng</option>
+<option value="1">Sân bóng đại học Nông Lâm</option>
+<option value="2">Sân bóng đại học KHTN</option>
+<option value="3">Sân bóng đại học Ngân Hàng</option>
+<option value="4">Sân bóng đại học Bách Khoa</option>
 <option value="5">Other</option>
 </select>
     </fieldset>
-    <fieldset>
-    <center>  <button name="Add" type="submit" id="" data-submit="...Sending">Add</button> </center>
-    </fieldset>
-  </form>
-  
 
-
-
-
-  <div class="form-style-6">
-<h3>Search</h3>
-<form>
-<input type="text" name="field1" placeholder="Your Name" />
-<input type="text" name="field2" placeholder="Your Id" />
-<input type="submit" value="Search" />
-</form>
-</div>
-
-<h3>Edit And Delete</h3>
-<table id="customers">
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Gender</th>
-      <th>Phone number</th>
-        <th>Address</th>
-           <th>School</th>
-                <th>Action</th>
-  </tr>
-
-  <tr>
-    <td>17154845</td>
-    <td>Châu Gia Phát</td>
-    <td>Male</th>
-      <td>0902544758</td>
-        <td>Bình Định</td>
-           <td>Medical University</td>
-                <td><i class="material-icons button edit">edit</i>
-        <i class="material-icons button delete">delete</i></td>
-  </tr> 
-
-  <tr>
-     <td>17137621</td>
-    <td>Lê Yến Nhi</td>
-    <td>Female</td>
-      <td>0232558669</td>
-        <td>Quãng Ngãi</td>
-           <td>University of Social Sciences and Humanities</td>
-                <td>
-        <i class="material-icons button edit">edit</i>
-        <i class="material-icons button delete">delete</i>
-     </td> 
-  </tr>
-
-  <tr>
-     <td>17125027</td>
-    <td>Nguyễn Quốc Anh</td>
-    <td>Male</td>
-      <td>0932554158</td>
-        <td>Cần Thơ</td>
-           <td>Nong lam University</td>
-                <td><i class="material-icons button edit">edit</i>
-        <i class="material-icons button delete">delete</i></td>
-  </tr>
-
-</table>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="table-responsive" data-pattern="priority-columns">
+        <table summary="This table shows how to create responsive tables using RWD-Table-Patterns' functionality" class="table table-bordered table-hover">
+        
+          <thead>
+            <tr>
+              <th>Sân</th>
+              <th data-priority="1">Giờ Thi Đấu</th>
+              <th data-priority="2">Địa Chỉ Sân</th>
+              <th data-priority="3">Số điện thoại </th>
+              <th data-priority="4">Chọn</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3</td>
+              <td>5h-6h30</td>
+              <td>Sân bóng đại học Nông Lâm</td>
+              <td>0958447558</td>
+              <td> <input type="radio" > </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>5h-6h30</td>
+              <td>Sân bóng đại học Nông Lâm</td>
+              <td>0958774665</td>
+              <td> <input type="radio" > </td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>5h-6h30</td>
+              <td>Sân bóng đại học Nông Lâm</td>
+              <td>0755448554</td>
+              <td> <input type="radio" > </td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div><!--end of .table-responsive-->
 </div>
     
     <!--================ End Banner Area =================-->
@@ -391,4 +390,3 @@ tr:hover {background-color:#f5f5f5;}
 
 </body>
 </html>
-	
