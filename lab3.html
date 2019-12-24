@@ -39,6 +39,21 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
    
     <style>
+     	    table {
+  border-collapse: collapse;
+  width: 100%;
+  color: black;
+    padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  
+  
+}th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+tr:hover {background-color:#f5f5f5;}
         body {font-family: Arial;}
         .tab {
             overflow: hidden;
@@ -224,12 +239,12 @@
         </nav>
 
         <div class="colorlib-footer">
-            <h3>Newsletter</h3>
+            <h3>Human-computer interaction</h3>
             <div class="d-flex justify-content-center">
                 <form action="#" class="colorlib-subscribe-form">
                     <div class="form-group d-flex">
                         <div class="icon"><span class="icon-paper-plane"></span></div>
-                        <input type="text" class="form-control" placeholder="Enter Email Address">
+                  
                     </div>
                 </form>
             </div>
@@ -291,19 +306,27 @@
     
     
    <div id="Rq" class="tab-pane fade in active">
-	   <br/>
-	1. Trong menu Exercises (hoặc Labs), tạo 1 menu Lab3 (file lab3.html) sau đó tạo 2 tab Bài 1, Bài 2
-	   <br/>
-      Ex1: Thiết kế một trang Web đơn giản sử dụng mẫu F-pattern ==> chuyển sang html (ex1.html)
-	   <br/>
-      Ex2: Thiết kế một trang Web sử dụng mẫu Z-pattern ==> chuyển sang html (ex2.html)
-	   <br/>
-	2. Với cả Ex1, Ex2: Tạo 2 tab Design và Implementation:
-	   <br/>
-     Design: Chụp lại hình ảnh để có cái nhìn tổng quan về file thiết kế, có nút Download để download
-file thiết kế về nếu muốn
-	   <br/>
-     Implementation: Nội dung phần hiện thực trên html.
+	<table>
+  <tr>
+    <th>	1. Trong menu Exercises (hoặc Labs), tạo 1 menu Lab3 (file lab3.html) sau đó tạo 2 tab Bài 1, Bài 2</th>
+ 
+   
+  </tr>
+  
+  <tr>
+    <td>      Ex1: Thiết kế một trang Web đơn giản sử dụng mẫu F-pattern ==> chuyển sang html (ex1.html) </td>
+
+   
+  </tr>
+  <tr>  <td>     Ex2: Thiết kế một trang Web sử dụng mẫu Z-pattern ==> chuyển sang html (ex2.html) </td> </tr>
+   <tr>
+    <th>	2. Với cả Ex1, Ex2: Tạo 2 tab Design và Implementation:</th>
+ 
+   
+  </tr><tr>  <td>     Design: Chụp lại hình ảnh để có cái nhìn tổng quan về file thiết kế, có nút Download để download
+file thiết kế về nếu muốn</td> </tr><tr>  <td>    Implementation: Nội dung phần hiện thực trên html.</td> </tr>
+  
+	</table>
     </div>
  
     <div id="Ex2" class="tab-pane fade">
@@ -321,7 +344,13 @@ file thiết kế về nếu muốn
         <img src="images/lab3_figma_z.PNG" width="700" height="450" class="cangiua" ><center> <a class="download" href="images/lab3_figma_z.fig" download="images/lab3_figma_z.fig">Download</a></center>
 
         <br><br>
-        <center> <a class="download" href="lab3.zip" download="lab3.zip">Download All</a></center>     
+        <center> <div class="col-4 text-center">
+                                                        <a href="lab3.zip" download>
+                                                            <button type="button" class="btn btn-primary">
+                                                                <i class="fa fa-cloud-download"></i> Download all file
+                                                            </button>
+                                                        </a>
+                                                    </div></center>     
     </div>
     
      <div id="s6" class="tab-pane fade">
