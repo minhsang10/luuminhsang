@@ -38,17 +38,72 @@
     </script>
    
     <style>
-
-    .button {
-  background-color:  rgb(0, 149, 185); 
+    h2 {
+  text-shadow: 2px 2px #FF0000;
+}
+ .button {
+  background-color: #4CAF50; /* Green */
   border: none;
-  color: black;
-
+  color: white;
+  padding:10px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 18px;
+  font-size: 10px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button3:hover {
+  background-color: #f44336;
+  color: white;
+}
+  
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+
 	    table {
   border-collapse: collapse;
   width: 100%;
@@ -206,12 +261,18 @@ tr:hover {background-color:#f5f5f5;}
     <div id="Ex1" class="tab-pane fade">
  
         <h3 style="text-align:center;">Sketches:</h3>
-        <img src="images/lab1_sketches.jpg"  width="700" height="450" class="cangiua"> <center><a class="download" href="images/lab1_sketches.jpg" download="images/lab1_sketches.jpg">Download</a></center>
+   <img src="images/lab1_sketches.jpg"  width="700" height="450" class="cangiua"> <center><a class="download" href="images/lab1_sketches.jpg" download="images/lab1_sketches.jpg">Download</a></center>
         <h3 style="text-align:center;">Figma:</h3>
         <img src="images/lab1_figma.PNG" width="700" height="450" class="cangiua" ><center> <a class="download" href="images/lab1_figma.fig" download="images/lab1_figma.fig">Download</a></center>
 
         <br><br>
-        <center> <a class="download" href="lab1.zip" download="lab1.zip">Download All</a></center>
+        <center>     <div class="col-4 text-center">
+                                                        <a href="lab1.zip" download>
+                                                            <button type="button" class="btn btn-primary">
+                                                                <i class="fa fa-cloud-download"></i> Download all file
+                                                            </button>
+                                                        </a>
+                                                    </div></center>
 </div>
     
     <div id="s3" class="tab-pane fade">
@@ -271,7 +332,7 @@ tr:hover {background-color:#f5f5f5;}
 </select>
    </fieldset>
     <fieldset>
-      <input placeholder="Your Phone Number " type="tel" tabindex="3" required>
+      <input placeholder="Your Phone Number " type="text" tabindex="3" required>
     </fieldset>
     <fieldset>
       <input placeholder="Your Address" type="text" tabindex="4" required>
@@ -287,7 +348,7 @@ tr:hover {background-color:#f5f5f5;}
 </select>
     </fieldset>
     <fieldset>
-    <center>  <button name="Add" type="submit" id="" data-submit="...Sending">Add</button> </center>
+    <center> <button class="button button2">Add</button> </center>
     </fieldset>
   </form>
   
@@ -299,8 +360,8 @@ tr:hover {background-color:#f5f5f5;}
 <h3>Search</h3>
 <form>
 <input type="text" name="field1" placeholder="Your Name" />
-<input type="text" name="field2" placeholder="Your Id" />
-<input type="submit" value="Search" />
+<input type="text" name="field2" placeholder="Your Id" /> <br>
+ <center> <button class="button button2">Search</button> </center>
 </form>
 </div>
 
@@ -323,8 +384,8 @@ tr:hover {background-color:#f5f5f5;}
       <td>0902544758</td>
         <td>Bình Định</td>
            <td>Medical University</td>
-                <td>  <button id="nut"><p>Edit</button>
-                                                        <button id="nut1"><p>Delete</p></button></td>
+                <td>  <button class="button button2">Edit</button>
+                                                     <button class="button button3">Delete</button></td>
   </tr> 
 
   <tr>
@@ -335,8 +396,8 @@ tr:hover {background-color:#f5f5f5;}
         <td>Quãng Ngãi</td>
            <td>University of Social Sciences and Humanities</td>
                 <td>
-            <button id="nut"><p>Edit</button>
-                                                        <button id="nut1"><p>Delete</p></button>
+            <button class="button button2">Edit</button>
+                                                     <button class="button button3">Delete</button>
      </td> 
   </tr>
 
@@ -347,8 +408,8 @@ tr:hover {background-color:#f5f5f5;}
       <td>0932554158</td>
         <td>Cần Thơ</td>
            <td>Nong lam University</td>
-                <td> <button id="nut"><p>Edit</button>
-                                                        <button id="nut1"><p>Delete</p></button></td>
+                <td><button class="button button2">Edit</button>
+                                                     <button class="button button3">Delete</button></td>
   </tr>
 
 </table>
